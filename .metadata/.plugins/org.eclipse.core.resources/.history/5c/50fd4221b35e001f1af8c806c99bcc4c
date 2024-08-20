@@ -1,0 +1,7 @@
+package com.techlabs.dbConnect.repository;
+
+public interface EmployeeRepository {
+
+	List<Employee> getAllEmployee();
+	
+}

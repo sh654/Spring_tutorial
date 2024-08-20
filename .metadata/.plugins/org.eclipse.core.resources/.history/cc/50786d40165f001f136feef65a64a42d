@@ -1,0 +1,6 @@
+package com.techlabs.dbconnect.service;
+
+public interface PaymentService {
+
+	List<Employee> get
+}

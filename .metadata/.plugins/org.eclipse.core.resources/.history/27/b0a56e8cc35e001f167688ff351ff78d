@@ -1,0 +1,13 @@
+package com.techlabs.dbConnect.service;
+
+import java.util.List;
+
+import com.techlabs.dbConnect.entity.Employee;
+
+public interface EmployeeService {
+
+	List<Employee> getAllEmployee();
+
+	
+	
+}

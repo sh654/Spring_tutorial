@@ -1,0 +1,12 @@
+package com.techlabs.model.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FirstRestController {
+	
+	public String sayHello() {
+		return "Hello Welcome to Spring boot World !!";
+	}
+	
+}

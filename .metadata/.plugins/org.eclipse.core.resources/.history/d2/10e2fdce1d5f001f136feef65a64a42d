@@ -1,0 +1,12 @@
+package com.techlabs.dbconnect.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="loan")
+public class Loan {
+
+	
+	
+}

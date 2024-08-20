@@ -1,0 +1,21 @@
+package com.techlabs.dbConnect.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.techlabs.dbConnect.entity.Student;
+import com.techlabs.dbConnect.repository.StudentRepository;
+
+public class StudentServiceImp implements StudentService{
+	
+	@Autowired
+	private StudentRepository studentRepo;
+	
+	@Override
+	public List<Student> getAllStudents() {
+		// TODO Auto-generated method stub
+		return studentRepo.getAllStudents();
+	}
+
+}

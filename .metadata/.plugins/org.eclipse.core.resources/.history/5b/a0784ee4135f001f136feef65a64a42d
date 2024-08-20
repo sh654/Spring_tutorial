@@ -1,0 +1,7 @@
+package com.techlabs.dbconnect.entity;
+
+public enum PaymentStatus {
+	
+	"SUCCESS",
+	"FAIL"
+}

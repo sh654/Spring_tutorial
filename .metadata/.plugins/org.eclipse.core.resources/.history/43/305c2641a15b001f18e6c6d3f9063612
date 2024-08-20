@@ -1,0 +1,21 @@
+package com.techlabs.dbConnect.entity;
+
+import java.util.List;
+
+import com.techlabs.dbConnect.repository.StudentRepository;
+
+import jakarta.persistence.EntityManager;
+
+public class StudntRepositoryImpl implements StudentRepository{
+
+	private EntityManager manager;
+	
+	@Override
+	public List<Student> getAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

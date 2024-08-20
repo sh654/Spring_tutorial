@@ -1,0 +1,5 @@
+package com.techlabs.dbConnect.repository;
+
+public interface StudentRepository {
+
+}

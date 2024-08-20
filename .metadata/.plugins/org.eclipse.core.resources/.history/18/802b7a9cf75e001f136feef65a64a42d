@@ -1,0 +1,34 @@
+package com.techlabs.dbconnect.repository;
+
+import java.util.List;
+
+import com.techlabs.dbconnect.entity.Customer;
+
+public class CustomerRepositoryImplement implements CustomerRepository{
+
+	@Override
+	public List<Customer> getAllCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getAllCustomer(int customerid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteCustomer(int customerid) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

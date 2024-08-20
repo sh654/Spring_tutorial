@@ -1,0 +1,12 @@
+package com.techlabs.dbConnect.repository;
+
+import java.util.List;
+
+import com.techlabs.dbConnect.entity.Employee;
+
+public interface EmployeeRepository {
+
+	List<Employee> getAllEmployee();
+	Employee getEmployee(int empid);
+	void addEmployee(Employee employee);
+}

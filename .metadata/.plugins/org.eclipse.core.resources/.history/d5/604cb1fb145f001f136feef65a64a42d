@@ -1,0 +1,5 @@
+package com.techlabs.dbconnect.repository;
+
+public interface PaymentRepository {
+
+}

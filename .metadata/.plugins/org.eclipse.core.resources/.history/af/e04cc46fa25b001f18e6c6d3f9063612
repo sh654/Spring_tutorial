@@ -1,0 +1,12 @@
+package com.techlabs.dbConnect.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.techlabs.dbConnect.entity.StudntRepositoryImpl;
+
+@RestController
+public class StudentController {
+
+	private StudntRepositoryImpl studentRepo; 
+	
+}
