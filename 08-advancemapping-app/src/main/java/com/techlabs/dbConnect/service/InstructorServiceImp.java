@@ -65,4 +65,6 @@ public class InstructorServiceImp implements InstructorService{
 		return instructorRepo.save(dbInstructor);
 	}
 
+	// course instructor allocate
+	
 }
