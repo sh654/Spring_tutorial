@@ -1,0 +1,74 @@
+2024-08-28T12:11:13.334+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : Starting Application using Java 21.0.3 with PID 1392 (D:\Spring Assignments\08-advancedmappings-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancedmappings-app)
+2024-08-28T12:11:13.335+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T12:11:13.538+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T12:11:13.579+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2024-08-28T12:11:13.727+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T12:11:13.729+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T12:11:13.729+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-28T12:11:13.762+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T12:11:13.762+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
+2024-08-28T12:11:13.818+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T12:11:13.821+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T12:11:13.830+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T12:11:13.831+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-28T12:11:13.855+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f1ffa6f
+2024-08-28T12:11:13.855+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-28T12:11:13.946+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T12:11:13.984+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T12:11:14.081+05:30  WARN 1392 --- [08-advancedmappings-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T12:11:14.189+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T12:11:14.220+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T12:11:14.223+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : Started Application in 0.946 seconds (process running for 275.266)
+2024-08-28T12:11:14.226+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T12:16:34.987+05:30  INFO 1392 --- [08-advancedmappings-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-28T12:16:35.003+05:30  INFO 1392 --- [08-advancedmappings-app] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T12:16:35.004+05:30  INFO 1392 --- [08-advancedmappings-app] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-28T12:16:35.014+05:30  INFO 1392 --- [08-advancedmappings-app] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-28T12:16:35.114+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : Starting Application using Java 21.0.3 with PID 1392 (D:\Spring Assignments\08-advancedmappings-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancedmappings-app)
+2024-08-28T12:16:35.114+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T12:16:35.339+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T12:16:35.382+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-08-28T12:16:35.504+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T12:16:35.506+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T12:16:35.507+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-28T12:16:35.531+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T12:16:35.531+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 413 ms
+2024-08-28T12:16:35.562+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T12:16:35.565+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T12:16:35.571+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T12:16:35.573+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-28T12:16:35.591+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5407decf
+2024-08-28T12:16:35.592+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-28T12:16:35.662+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T12:16:35.691+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T12:16:35.777+05:30  WARN 1392 --- [08-advancedmappings-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T12:16:35.855+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T12:16:35.865+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T12:16:35.870+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : Started Application in 0.791 seconds (process running for 596.912)
+2024-08-28T12:16:35.872+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T12:31:30.193+05:30  INFO 1392 --- [08-advancedmappings-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-28T12:31:30.215+05:30  INFO 1392 --- [08-advancedmappings-app] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T12:31:30.216+05:30  INFO 1392 --- [08-advancedmappings-app] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-08-28T12:31:30.233+05:30  INFO 1392 --- [08-advancedmappings-app] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-08-28T12:31:30.340+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : Starting Application using Java 21.0.3 with PID 1392 (D:\Spring Assignments\08-advancedmappings-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancedmappings-app)
+2024-08-28T12:31:30.341+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T12:31:30.513+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T12:31:30.544+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 3 JPA repository interfaces.
+2024-08-28T12:31:30.606+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T12:31:30.607+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T12:31:30.608+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-28T12:31:30.626+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T12:31:30.626+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 282 ms
+2024-08-28T12:31:30.651+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T12:31:30.653+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T12:31:30.659+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T12:31:30.660+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-08-28T12:31:30.676+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d30ba17
+2024-08-28T12:31:30.676+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-08-28T12:31:30.741+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T12:31:30.771+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T12:31:30.840+05:30  WARN 1392 --- [08-advancedmappings-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T12:31:30.904+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T12:31:30.914+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T12:31:30.917+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] com.techlabs.mapping.Application         : Started Application in 0.614 seconds (process running for 1491.959)
+2024-08-28T12:31:30.918+05:30  INFO 1392 --- [08-advancedmappings-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

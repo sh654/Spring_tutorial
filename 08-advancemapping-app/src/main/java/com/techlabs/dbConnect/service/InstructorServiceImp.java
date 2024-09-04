@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.validator.internal.util.stereotypes.Lazy;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+
 import org.springframework.stereotype.Service;
+
 
 import com.techlabs.dbConnect.dto.CourseDto;
 import com.techlabs.dbConnect.dto.InstructorDto;
@@ -23,6 +27,10 @@ public class InstructorServiceImp implements InstructorService{
 	@Autowired
 	private CourseRepository courseRepo;
 	
+	@Autowired
+	@Lazy
+	private CourseService courseService;
+	
 //	@Override
 //	public Instructor addInstructor(Instructor instructor) {
 //		// TODO Auto-generated method stub
@@ -30,16 +38,33 @@ public class InstructorServiceImp implements InstructorService{
 //	}
 
 	@Override
-	public Instructor addInstructor(InstructorDto instructorsdto) {
+	public InstructorDto addInstructor(InstructorDto instructordto) {
 		// TODO Auto-generated method stub
-		Instructor instructor = new Instructor();
-		instructor.setInstructorName(instructorsdto.getInstructorName());
-		instructor.setInstructorEmail(instructorsdto.getInstructorEmail());
-		instructor.setQualifications(instructorsdto.getQualifications());
 		
-		return instructorRepo.save(instructor); // since we cant directly add dto as repo is mapped to  instructor
+		Instructor instructor = toInstructorMapper(instructordto);
+		
+		instructor = instructorRepo.save(instructor);
+		
+		return (toInstructorDtoMapper(instructor));
+	}
+	
+	private Instructor toInstructorMapper(InstructorDto instructordto) {
+		Instructor instructor = new Instructor();
+		instructor.setInstructorName(instructordto.getInstructorName());
+		instructor.setInstructorEmail(instructordto.getInstructorEmail());
+		instructor.setQualifications(instructordto.getQualifications());
+		return instructor;
 	}
 
+	private InstructorDto toInstructorDtoMapper(Instructor instructor) {
+		InstructorDto instructordto = new InstructorDto();
+		instructordto.setInstructorId(instructor.getInstructorId());
+		instructordto.setInstructorEmail(instructor.getInstructorEmail());
+		instructordto.setQualifications(instructor.getInstructorName());
+		instructordto.setInstructorName(instructor.getInstructorName());
+		return instructordto;
+	}
+	
 	@Override
 	public Instructor allocateCourses(int instructorId, List<Course> courses) {
 		// TODO Auto-generated method stub
@@ -64,6 +89,49 @@ public class InstructorServiceImp implements InstructorService{
 		
 		return instructorRepo.save(dbInstructor);
 	}
+
+//	@Override
+//	public InstructorDto getInstructor(int instructorId) {
+//		// TODO Auto-generated method stub
+//		
+//		Optional<Instructor> optionalInstructor = instructorRepo.findById(instructorId);
+//		if(!optionalInstructor.isPresent()) {
+//			return null;
+//		}
+//		
+//		Instructor instructorDb = optionalInstructor.get();
+//		
+//		return toInstructorDtoMapper(instructorDb);
+//	}
+//	
+	@Override
+	public InstructorDto getInstructor(int instructorId) {
+	    Optional<Instructor> optionalInstructor = instructorRepo.findById(instructorId);
+	    if (!optionalInstructor.isPresent()) {
+	        System.out.println("Instructor not found for ID: " + instructorId);
+	        return null;
+	    }
+	    
+	    Instructor instructorDb = optionalInstructor.get();
+	    InstructorDto instructorDto = toInstructorDtoMapper(instructorDb);
+	    if (instructorDto == null) {
+	        System.out.println("Mapping returned null for Instructor ID: " + instructorId);
+	    }
+	    return instructorDto;
+	}
+
+
+	@Override
+	public List<CourseDto> getInstructorCourses(int instructorId) {
+	        return courseService.getInstructorCourses(instructorId);
+	    }
+	@Override
+	public Page<InstructorDto> getAllInstructor(int pageNumber, int pageSize){
+	    // Fetch the paginated data for instructors
+		Page<InstructorDto> instructorPage = getAllInstructor(pageNumber, pageSize);
+	    return null;
+	}
+
 
 	// course instructor allocate
 	

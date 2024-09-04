@@ -1,5 +1,0 @@
-package com.techlabs.dbConnect.service;
-
-public class StudentServiceImp implements StudentService{
-
-}

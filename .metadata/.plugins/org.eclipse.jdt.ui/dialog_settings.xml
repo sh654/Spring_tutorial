@@ -14,8 +14,8 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewPackageCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="87"/>
-		<item key="DIALOG_Y_ORIGIN" value="136"/>
+		<item key="DIALOG_X_ORIGIN" value="164"/>
+		<item key="DIALOG_Y_ORIGIN" value="120"/>
 		<item key="DIALOG_WIDTH" value="525"/>
 		<item key="DIALOG_HEIGHT" value="500"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -24,8 +24,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="471"/>
-		<item key="DIALOG_Y_ORIGIN" value="77"/>
+		<item key="DIALOG_X_ORIGIN" value="46"/>
+		<item key="DIALOG_Y_ORIGIN" value="52"/>
 		<item key="DIALOG_WIDTH" value="574"/>
 		<item key="DIALOG_HEIGHT" value="659"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -84,8 +84,8 @@
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="NewInterfaceCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="311"/>
-		<item key="DIALOG_Y_ORIGIN" value="107"/>
+		<item key="DIALOG_X_ORIGIN" value="110"/>
+		<item key="DIALOG_Y_ORIGIN" value="115"/>
 		<item key="DIALOG_WIDTH" value="579"/>
 		<item key="DIALOG_HEIGHT" value="543"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -108,8 +108,8 @@
 	<section name="RenameInformationPopup">
 	</section>
 	<section name="NewEnumCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="149"/>
-		<item key="DIALOG_Y_ORIGIN" value="28"/>
+		<item key="DIALOG_X_ORIGIN" value="505"/>
+		<item key="DIALOG_Y_ORIGIN" value="62"/>
 		<item key="DIALOG_WIDTH" value="542"/>
 		<item key="DIALOG_HEIGHT" value="517"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

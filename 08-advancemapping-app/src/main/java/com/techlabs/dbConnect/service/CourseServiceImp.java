@@ -1,7 +1,10 @@
 package com.techlabs.dbConnect.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.validator.internal.util.stereotypes.Lazy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +22,10 @@ public class CourseServiceImp implements CourseService{
 	
 	@Autowired
 	private InstructorRepository instructorRepo;
+	
+	@Autowired
+	@Lazy
+	private InstructorService instructorService;
 
 	@Override
 	public Course addCourse(CourseDto coursedto) {
@@ -50,6 +57,28 @@ public class CourseServiceImp implements CourseService{
 		
 		return courseRepo.save(dbCourse);
 	}
+
+	@Override
+	public List<CourseDto> getInstructorCourses(int instructorId) {
+		// TODO Auto-generated method stub
+		List<Course> courseDb = courseRepo.findAllByInstructor(instructorService.getInstructor(instructorId));
+		
+		List<CourseDto> courses = new ArrayList<>();
+		
+		courseDb.forEach((course) -> {
+			courses.add(toCourseDto(course));
+		});
+ 		return courses;
+	}
 	
+	private CourseDto toCourseDto(Course course) {
+		CourseDto courseDto = new CourseDto();
+		courseDto.setCourseId(course.getCourseId());
+		courseDto.setCourseName(course.getCourseName());
+		courseDto.setDuration(course.getDuration());
+		courseDto.setFees(course.getFees());
+		
+		return courseDto;
+	}
 	
 }

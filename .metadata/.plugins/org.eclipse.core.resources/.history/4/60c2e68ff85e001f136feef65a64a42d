@@ -1,5 +1,0 @@
-package com.techlabs.dbconnect.service;
-
-public interface CustomerService {
-
-}

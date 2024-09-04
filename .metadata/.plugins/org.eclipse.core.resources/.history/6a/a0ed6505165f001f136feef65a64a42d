@@ -1,6 +1,0 @@
-package com.techlabs.dbconnect.service;
-
-public interface EmployeeService {
-
-	List<Employee> get
-}

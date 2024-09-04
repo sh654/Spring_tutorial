@@ -1,0 +1,755 @@
+2024-08-29T20:13:22.823+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 18400 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:13:22.829+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:13:22.870+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-29T20:13:22.892+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-29T20:13:23.518+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:13:23.542+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:13:24.154+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:13:24.172+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:13:24.173+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:13:24.221+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:13:24.222+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1329 ms
+2024-08-29T20:13:24.291+05:30 ERROR 18400 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@61e4705b
+2024-08-29T20:13:24.295+05:30  WARN 18400 --- [jwt-practice-app] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-08-29T20:13:24.299+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-29T20:13:24.315+05:30  INFO 18400 --- [jwt-practice-app] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-29T20:13:24.338+05:30 ERROR 18400 --- [jwt-practice-app] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at com.techlabs.JwtPracticeAppApplication.main(JwtPracticeAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 37 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:494) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:479) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:373) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:59) ~[spring-boot-autoconfigure-3.3.3.jar:3.3.3]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117) ~[spring-boot-autoconfigure-3.3.3.jar:3.3.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 38 common frames omitted
+
+2024-08-29T20:22:24.301+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:22:24.306+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:22:24.358+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-29T20:22:24.358+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-29T20:22:24.982+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:22:25.005+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:22:25.591+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:22:25.606+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:22:25.606+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:22:25.650+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:22:25.650+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1291 ms
+2024-08-29T20:22:25.809+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:22:25.865+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-29T20:22:25.897+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:22:26.182+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:22:26.208+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-29T20:22:26.571+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75e55259
+2024-08-29T20:22:26.574+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-29T20:22:26.943+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:22:26.947+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:22:27.007+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:22:27.420+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:22:27.565+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:22:27.604+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:22:27.612+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 3.771 seconds (process running for 4.55)
+2024-08-29T20:22:48.207+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:22:48.207+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:22:48.210+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-29T20:30:43.649+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-29T20:30:43.666+05:30  INFO 17244 --- [jwt-practice-app] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:30:43.670+05:30  INFO 17244 --- [jwt-practice-app] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-29T20:30:43.681+05:30  INFO 17244 --- [jwt-practice-app] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-29T20:30:43.810+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:30:43.810+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:30:44.021+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:30:44.024+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:30:44.124+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:30:44.125+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:30:44.126+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:30:44.151+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:30:44.151+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 338 ms
+2024-08-29T20:30:44.199+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:30:44.203+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:30:44.212+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:30:44.213+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-29T20:30:44.232+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3179e562
+2024-08-29T20:30:44.232+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-29T20:30:44.249+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:30:44.250+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:30:44.278+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:30:44.379+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:30:44.407+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:30:44.434+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:30:44.439+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.672 seconds (process running for 501.377)
+2024-08-29T20:30:44.442+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:31:35.569+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:31:35.579+05:30  INFO 17244 --- [jwt-practice-app] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:31:35.581+05:30  INFO 17244 --- [jwt-practice-app] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-29T20:31:35.590+05:30  INFO 17244 --- [jwt-practice-app] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-29T20:31:35.686+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:31:35.686+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:31:35.850+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:31:35.853+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:31:35.940+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:31:35.941+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:31:35.942+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:31:35.964+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:31:35.964+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 276 ms
+2024-08-29T20:31:36.008+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:31:36.011+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:31:36.021+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:31:36.022+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-29T20:31:36.043+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55a7bff6
+2024-08-29T20:31:36.043+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-29T20:31:36.057+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:31:36.058+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:31:36.078+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:31:36.163+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:31:36.181+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:31:36.191+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:31:36.194+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.54 seconds (process running for 553.132)
+2024-08-29T20:31:36.195+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:32:17.292+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:32:17.305+05:30  INFO 17244 --- [jwt-practice-app] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:32:17.306+05:30  INFO 17244 --- [jwt-practice-app] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-08-29T20:32:17.313+05:30  INFO 17244 --- [jwt-practice-app] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-08-29T20:32:17.406+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:32:17.406+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:32:17.556+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:32:17.559+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:32:17.630+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:32:17.631+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:32:17.632+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:32:17.656+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:32:17.656+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 247 ms
+2024-08-29T20:32:17.688+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:32:17.689+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:32:17.699+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:32:17.699+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-08-29T20:32:17.722+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61a0c2c4
+2024-08-29T20:32:17.722+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-08-29T20:32:17.738+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:32:17.739+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:32:17.758+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:32:17.823+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9a52454a-846a-4afd-8114-3bb27574bf5a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-08-29T20:32:17.824+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:32:17.837+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:32:17.845+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:32:17.849+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.477 seconds (process running for 594.787)
+2024-08-29T20:32:17.851+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:32:30.087+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:32:30.087+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:32:30.088+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-29T20:35:07.230+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:35:07.242+05:30  INFO 17244 --- [jwt-practice-app] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:35:07.242+05:30  INFO 17244 --- [jwt-practice-app] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-08-29T20:35:07.253+05:30  INFO 17244 --- [jwt-practice-app] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-08-29T20:35:07.362+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:35:07.363+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:35:07.491+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:35:07.494+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:35:07.563+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:35:07.564+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:35:07.564+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:35:07.602+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:35:07.603+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 238 ms
+2024-08-29T20:35:07.639+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:35:07.642+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:35:07.653+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:35:07.654+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-08-29T20:35:07.678+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67b28bc5
+2024-08-29T20:35:07.678+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-08-29T20:35:07.699+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:35:07.699+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:35:07.719+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:35:07.778+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:35:07.794+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:35:07.803+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:35:07.805+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.473 seconds (process running for 764.743)
+2024-08-29T20:35:07.806+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:35:17.502+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:35:17.502+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:35:17.504+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-29T20:35:49.966+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:35:49.978+05:30  INFO 17244 --- [jwt-practice-app] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:35:49.978+05:30  INFO 17244 --- [jwt-practice-app] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-08-29T20:35:49.986+05:30  INFO 17244 --- [jwt-practice-app] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-08-29T20:35:50.074+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:35:50.074+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:35:50.200+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:35:50.203+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:35:50.269+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:35:50.270+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:35:50.270+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:35:50.285+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:35:50.285+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 209 ms
+2024-08-29T20:35:50.320+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:35:50.322+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:35:50.331+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:35:50.332+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-08-29T20:35:50.346+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ac4ad4e
+2024-08-29T20:35:50.346+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-08-29T20:35:50.361+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:35:50.361+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:35:50.380+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:35:50.448+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:35:50.467+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:35:50.480+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:35:50.482+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.439 seconds (process running for 807.42)
+2024-08-29T20:35:50.483+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:35:57.130+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:35:57.130+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:35:57.131+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-29T20:38:08.398+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:38:08.412+05:30  INFO 17244 --- [jwt-practice-app] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:38:08.412+05:30  INFO 17244 --- [jwt-practice-app] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-08-29T20:38:08.420+05:30  INFO 17244 --- [jwt-practice-app] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-08-29T20:38:08.504+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:38:08.506+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:38:08.633+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:38:08.636+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:38:08.689+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:38:08.689+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:38:08.690+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:38:08.706+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:38:08.706+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 198 ms
+2024-08-29T20:38:08.710+05:30 ERROR 17244 --- [jwt-practice-app] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityFilterChainRegistration' defined in class path resource [org/springframework/boot/autoconfigure/security/servlet/SecurityFilterAutoConfiguration.class]: Unsatisfied dependency expressed through method 'securityFilterChainRegistration' parameter 0: Error creating bean with name 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties': Could not bind properties to 'SecurityProperties' : prefix=spring.security, ignoreInvalidFields=false, ignoreUnknownFields=true
+2024-08-29T20:38:08.720+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-29T20:38:08.726+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-08-29T20:38:08.730+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-29T20:38:08.748+05:30 ERROR 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.security.user' to org.springframework.boot.autoconfigure.security.SecurityProperties$User:
+
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [org.springframework.boot.autoconfigure.security.SecurityProperties$User]
+
+Action:
+
+Update your application's configuration
+
+2024-08-29T20:38:16.302+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:38:16.303+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:38:16.421+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:38:16.424+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:38:16.483+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:38:16.484+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:38:16.484+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:38:16.501+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:38:16.501+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 197 ms
+2024-08-29T20:38:16.531+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:38:16.533+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:38:16.541+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:38:16.542+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-08-29T20:38:16.556+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a24a3db
+2024-08-29T20:38:16.556+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-08-29T20:38:16.566+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:38:16.566+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:38:16.578+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:38:16.644+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 04c3ca41-2436-42b2-9903-ebc4466ddd7a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-08-29T20:38:16.644+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:38:16.656+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:38:16.667+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:38:16.669+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.392 seconds (process running for 953.608)
+2024-08-29T20:38:16.671+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:38:24.347+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:38:24.348+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:38:24.348+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-29T20:38:59.890+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:38:59.903+05:30  INFO 17244 --- [jwt-practice-app] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:38:59.904+05:30  INFO 17244 --- [jwt-practice-app] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-08-29T20:38:59.910+05:30  INFO 17244 --- [jwt-practice-app] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-08-29T20:39:00.000+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:39:00.000+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:39:00.123+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:39:00.126+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:39:00.192+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:39:00.193+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:39:00.193+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:39:00.210+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:39:00.210+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 208 ms
+2024-08-29T20:39:00.238+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:39:00.240+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:39:00.248+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:39:00.248+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-08-29T20:39:00.263+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59dd5379
+2024-08-29T20:39:00.263+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-08-29T20:39:00.276+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:39:00.277+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:39:00.295+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:39:00.350+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3faaf9f5-85ab-4968-89f6-3def16d38138
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-08-29T20:39:00.351+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:39:00.366+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:39:00.375+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:39:00.377+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.403 seconds (process running for 997.315)
+2024-08-29T20:39:00.378+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:39:41.569+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:39:41.583+05:30  INFO 17244 --- [jwt-practice-app] [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:39:41.583+05:30  INFO 17244 --- [jwt-practice-app] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-08-29T20:39:41.589+05:30  INFO 17244 --- [jwt-practice-app] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-08-29T20:39:41.668+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:39:41.668+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:39:41.767+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:39:41.769+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:39:41.825+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:39:41.826+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:39:41.826+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:39:41.841+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:39:41.841+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 172 ms
+2024-08-29T20:39:41.867+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:39:41.869+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:39:41.875+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:39:41.876+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-08-29T20:39:41.890+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3668b1ee
+2024-08-29T20:39:41.890+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-08-29T20:39:41.904+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:39:41.904+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:39:41.919+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:39:41.968+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 32239cd7-be98-4e9d-a5ad-0d1299996103
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-08-29T20:39:41.968+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:39:41.982+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:39:41.988+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:39:41.991+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.345 seconds (process running for 1038.929)
+2024-08-29T20:39:41.992+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:40:06.806+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:40:06.819+05:30  INFO 17244 --- [jwt-practice-app] [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:40:06.821+05:30  INFO 17244 --- [jwt-practice-app] [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-08-29T20:40:06.827+05:30  INFO 17244 --- [jwt-practice-app] [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-08-29T20:40:06.908+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:40:06.908+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:40:07.025+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:40:07.030+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:40:07.084+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:40:07.085+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:40:07.085+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:40:07.100+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:40:07.100+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2024-08-29T20:40:07.125+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:40:07.127+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:40:07.134+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:40:07.134+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-08-29T20:40:07.149+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@446c0b8b
+2024-08-29T20:40:07.150+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-08-29T20:40:07.161+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:40:07.161+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:40:07.176+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:40:07.234+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8310e87b-c228-495a-a491-96bf601dc3bd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-08-29T20:40:07.235+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:40:07.246+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:40:07.253+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:40:07.255+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.372 seconds (process running for 1064.193)
+2024-08-29T20:40:07.255+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:40:09.606+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:40:09.606+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:40:09.608+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-29T20:43:28.180+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:43:28.195+05:30  INFO 17244 --- [jwt-practice-app] [Thread-42] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:43:28.195+05:30  INFO 17244 --- [jwt-practice-app] [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-08-29T20:43:28.202+05:30  INFO 17244 --- [jwt-practice-app] [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-08-29T20:43:28.286+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:43:28.287+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:43:28.396+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:43:28.400+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:43:28.454+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:43:28.455+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:43:28.455+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:43:28.477+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:43:28.477+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2024-08-29T20:43:28.504+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:43:28.506+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:43:28.511+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:43:28.512+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-08-29T20:43:28.528+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50cf512f
+2024-08-29T20:43:28.528+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-08-29T20:43:28.542+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:43:28.542+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:43:28.557+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:43:28.610+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:43:28.623+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:43:28.631+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:43:28.634+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.371 seconds (process running for 1265.572)
+2024-08-29T20:43:28.635+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:43:39.550+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T20:43:39.550+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T20:43:39.550+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-29T20:53:21.141+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-29T20:53:21.155+05:30  INFO 17244 --- [jwt-practice-app] [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:53:21.157+05:30  INFO 17244 --- [jwt-practice-app] [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-08-29T20:53:21.164+05:30  INFO 17244 --- [jwt-practice-app] [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-08-29T20:53:21.246+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:53:21.247+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:53:21.345+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:53:21.348+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:53:21.406+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:53:21.406+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:53:21.407+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:53:21.423+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:53:21.423+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 174 ms
+2024-08-29T20:53:21.453+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:53:21.455+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:53:21.461+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:53:21.462+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2024-08-29T20:53:21.477+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1688f715
+2024-08-29T20:53:21.478+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2024-08-29T20:53:21.493+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:53:21.493+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:53:21.508+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:53:21.556+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:53:21.569+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:53:21.578+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:53:21.581+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.358 seconds (process running for 1858.519)
+2024-08-29T20:53:21.582+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:53:54.485+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-29T20:53:54.497+05:30  INFO 17244 --- [jwt-practice-app] [Thread-50] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:53:54.498+05:30  INFO 17244 --- [jwt-practice-app] [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2024-08-29T20:53:54.504+05:30  INFO 17244 --- [jwt-practice-app] [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2024-08-29T20:53:54.588+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:53:54.589+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:53:54.677+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:53:54.680+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:53:54.733+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:53:54.734+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:53:54.734+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:53:54.750+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:53:54.750+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 160 ms
+2024-08-29T20:53:54.788+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:53:54.791+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:53:54.797+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:53:54.798+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2024-08-29T20:53:54.814+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55ff17cd
+2024-08-29T20:53:54.815+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2024-08-29T20:53:54.829+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:53:54.829+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:53:54.848+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:53:54.901+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:53:54.922+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:53:54.930+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:53:54.933+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.366 seconds (process running for 1891.871)
+2024-08-29T20:53:54.934+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:54:16.742+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:54:16.757+05:30  INFO 17244 --- [jwt-practice-app] [Thread-54] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:54:16.758+05:30  INFO 17244 --- [jwt-practice-app] [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-08-29T20:54:16.764+05:30  INFO 17244 --- [jwt-practice-app] [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2024-08-29T20:54:16.844+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:54:16.844+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:54:16.930+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:54:16.932+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:54:16.979+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:54:16.980+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:54:16.980+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:54:16.995+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:54:16.995+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 149 ms
+2024-08-29T20:54:17.024+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:54:17.026+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:54:17.033+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:54:17.034+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2024-08-29T20:54:17.048+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33b00d96
+2024-08-29T20:54:17.049+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2024-08-29T20:54:17.063+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:54:17.063+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:54:17.077+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:54:17.133+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:54:17.148+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:54:17.156+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:54:17.158+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.334 seconds (process running for 1914.097)
+2024-08-29T20:54:17.159+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T20:56:07.660+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T20:56:07.672+05:30  INFO 17244 --- [jwt-practice-app] [Thread-58] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:56:07.672+05:30  INFO 17244 --- [jwt-practice-app] [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2024-08-29T20:56:07.678+05:30  INFO 17244 --- [jwt-practice-app] [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2024-08-29T20:56:07.764+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T20:56:07.764+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T20:56:07.857+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T20:56:07.859+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T20:56:07.920+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T20:56:07.920+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T20:56:07.921+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T20:56:07.934+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T20:56:07.934+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 169 ms
+2024-08-29T20:56:07.956+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T20:56:07.958+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T20:56:07.964+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T20:56:07.965+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2024-08-29T20:56:07.980+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46516d2f
+2024-08-29T20:56:07.981+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2024-08-29T20:56:07.993+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T20:56:07.993+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T20:56:08.006+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T20:56:08.052+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T20:56:08.061+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T20:56:08.069+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T20:56:08.071+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.329 seconds (process running for 2025.01)
+2024-08-29T20:56:08.072+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T21:00:58.988+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T21:00:59.003+05:30  INFO 17244 --- [jwt-practice-app] [Thread-62] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:00:59.003+05:30  INFO 17244 --- [jwt-practice-app] [Thread-62] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2024-08-29T21:00:59.010+05:30  INFO 17244 --- [jwt-practice-app] [Thread-62] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2024-08-29T21:00:59.102+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T21:00:59.102+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T21:00:59.202+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T21:00:59.205+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T21:00:59.251+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T21:00:59.252+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T21:00:59.252+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T21:00:59.267+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T21:00:59.267+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 163 ms
+2024-08-29T21:00:59.297+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T21:00:59.299+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T21:00:59.307+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T21:00:59.307+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2024-08-29T21:00:59.331+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@268e1f48
+2024-08-29T21:00:59.331+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2024-08-29T21:00:59.346+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T21:00:59.346+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:00:59.362+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T21:00:59.410+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T21:00:59.422+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T21:00:59.429+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T21:00:59.433+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.352 seconds (process running for 2316.371)
+2024-08-29T21:00:59.434+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T21:01:13.072+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T21:01:13.087+05:30  INFO 17244 --- [jwt-practice-app] [Thread-66] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:01:13.087+05:30  INFO 17244 --- [jwt-practice-app] [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2024-08-29T21:01:13.092+05:30  INFO 17244 --- [jwt-practice-app] [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2024-08-29T21:01:13.189+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T21:01:13.190+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T21:01:13.280+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T21:01:13.282+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T21:01:13.331+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T21:01:13.332+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T21:01:13.332+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T21:01:13.353+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T21:01:13.353+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 162 ms
+2024-08-29T21:01:13.377+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T21:01:13.380+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T21:01:13.385+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T21:01:13.385+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2024-08-29T21:01:13.401+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@440ddb10
+2024-08-29T21:01:13.401+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2024-08-29T21:01:13.416+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T21:01:13.417+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:01:13.434+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T21:01:13.480+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T21:01:13.489+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T21:01:13.496+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T21:01:13.499+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.334 seconds (process running for 2330.437)
+2024-08-29T21:01:13.500+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T21:01:23.902+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T21:01:23.902+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T21:01:23.903+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-29T21:06:46.901+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T21:06:46.915+05:30  INFO 17244 --- [jwt-practice-app] [Thread-70] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:06:46.916+05:30  INFO 17244 --- [jwt-practice-app] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2024-08-29T21:06:46.923+05:30  INFO 17244 --- [jwt-practice-app] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2024-08-29T21:06:47.017+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T21:06:47.017+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T21:06:47.125+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T21:06:47.128+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T21:06:47.189+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T21:06:47.190+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T21:06:47.190+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T21:06:47.211+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T21:06:47.211+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
+2024-08-29T21:06:47.246+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T21:06:47.248+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T21:06:47.256+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T21:06:47.257+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2024-08-29T21:06:47.277+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aa6b1a3
+2024-08-29T21:06:47.278+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2024-08-29T21:06:47.297+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T21:06:47.297+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:06:47.317+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T21:06:47.376+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T21:06:47.397+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T21:06:47.409+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T21:06:47.411+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.416 seconds (process running for 2664.349)
+2024-08-29T21:06:47.412+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T21:06:56.329+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T21:06:56.330+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T21:06:56.331+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-29T21:12:28.640+05:30  INFO 17244 --- [jwt-practice-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-29T21:12:28.654+05:30  INFO 17244 --- [jwt-practice-app] [Thread-74] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:12:28.654+05:30  INFO 17244 --- [jwt-practice-app] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2024-08-29T21:12:28.661+05:30  INFO 17244 --- [jwt-practice-app] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2024-08-29T21:12:28.760+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T21:12:28.760+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T21:12:28.855+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T21:12:28.857+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T21:12:28.907+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T21:12:28.908+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T21:12:28.908+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T21:12:28.931+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T21:12:28.931+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 169 ms
+2024-08-29T21:12:28.958+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T21:12:28.959+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T21:12:28.964+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T21:12:28.964+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2024-08-29T21:12:28.978+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3453f185
+2024-08-29T21:12:28.978+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2024-08-29T21:12:28.989+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T21:12:28.990+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:12:28.998+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+2024-08-29T21:12:28.998+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:12:28.999+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2024-08-29T21:12:29.000+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2024-08-29T21:12:29.001+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-29T21:12:29.006+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-29T21:12:29.009+05:30 ERROR 17244 --- [jwt-practice-app] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at com.techlabs.JwtPracticeAppApplication.main(JwtPracticeAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.techlabs.controller.StudentController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6a0047ff]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 22 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: CsrfToken
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2676) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.12.jar:6.1.12]
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: CsrfToken
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	... 28 common frames omitted
+
+2024-08-29T21:12:35.538+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Starting JwtPracticeAppApplication using Java 21.0.3 with PID 17244 (D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app\target\classes started by Shivam.Upadhyay in D:\Spring Assignments\08-advancemapping-app2\jwt-practice-app)
+2024-08-29T21:12:35.538+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T21:12:35.630+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T21:12:35.632+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-08-29T21:12:35.682+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T21:12:35.683+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T21:12:35.683+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29T21:12:35.700+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T21:12:35.700+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 161 ms
+2024-08-29T21:12:35.725+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T21:12:35.727+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T21:12:35.732+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T21:12:35.732+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2024-08-29T21:12:35.749+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79d58bc2
+2024-08-29T21:12:35.749+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2024-08-29T21:12:35.766+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T21:12:35.767+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T21:12:35.781+05:30  WARN 17244 --- [jwt-practice-app] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T21:12:35.831+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-29T21:12:35.842+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T21:12:35.851+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T21:12:35.854+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] com.techlabs.JwtPracticeAppApplication   : Started JwtPracticeAppApplication in 0.336 seconds (process running for 3012.792)
+2024-08-29T21:12:35.855+05:30  INFO 17244 --- [jwt-practice-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T21:13:27.967+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T21:13:27.967+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T21:13:27.969+05:30  INFO 17244 --- [jwt-practice-app] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

@@ -18,4 +18,6 @@ public class PageResponse<T> {
 	private int size;
 	 private List<T> StudentPageResponse;
 	 private boolean isLastPage;
+//	public void setContent(List<InstructorDto> instructorDtos);
+		// TODO Auto-generated method stub
 }
