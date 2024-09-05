@@ -21,9 +21,9 @@ public class TransactionDto {
     
     private String description;
     @NotNull(message = "Sender account number is required")
-    private Long senderAccountNumber;
+    private long senderAccountNumber;
     @NotNull(message = "Sender account number is required")
-    private Long receiverAccountNumber;
+    private long receiverAccountNumber;
     private AccountsDto accountDto;  // Nested DTO for Account
 	
     public Long getReceiverAccountNumber() {

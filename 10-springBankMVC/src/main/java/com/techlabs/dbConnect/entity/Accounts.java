@@ -3,10 +3,12 @@ package com.techlabs.dbConnect.entity;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.techlabs.dbConnect.enums.AccountType;
+import com.techlabs.dbConnect.enums.StatusType;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -61,12 +63,16 @@ public class Accounts {
     @Min(value = 1, message = "Amount must be positive")
     private double amount;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="customerId")
+	@ManyToOne
+	@JoinColumn(name="customer_id")
 	private Customers customer;
 	
 	 @OneToMany(mappedBy = "account", cascade = {CascadeType.REFRESH, CascadeType.MERGE, CascadeType.DETACH})
-	 private Set<Transactions> transactions = new HashSet<>();
+	 private List<Transactions> transactions;
+	 
+	 @Column(name="status")
+	 @Enumerated(EnumType.STRING)
+	 private StatusType status;
 	 
 	 @PrePersist
 	 protected void onCreate() {

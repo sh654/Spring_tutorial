@@ -12,4 +12,5 @@ public interface UserService {
 	 void deleteUser(int userId);
 	 PageResponse<UsersDto> getAllUsers();
 	
+	 UsersDto getUser(int userId);
 }

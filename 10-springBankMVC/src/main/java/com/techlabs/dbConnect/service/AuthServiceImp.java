@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import com.techlabs.dbConnect.dtos.LoginDto;
 import com.techlabs.dbConnect.dtos.UsersDto;
+import com.techlabs.dbConnect.entity.EmailDetails;
 import com.techlabs.dbConnect.entity.Role;
 import com.techlabs.dbConnect.entity.Users;
 import com.techlabs.dbConnect.exception.UserApiException;
@@ -43,6 +44,9 @@ public class AuthServiceImp implements AuthService{
 	@Autowired
 	private JwtTokenProvider tokenProvider;
 	
+	@Autowired
+	private EmailService emailService;
+	
 	@Override
 	public Users update(int userId, UsersDto usersDto) {
 	    // Fetch the user by ID, or throw an exception if not found
@@ -65,8 +69,14 @@ public class AuthServiceImp implements AuthService{
 //	        
 //	    }
 
+	    Users savedUser = userRepo.save(users);
+	    EmailDetails emailDetails = new EmailDetails();
+	    emailDetails.setRecipient(savedUser.getUserName());
+	    emailDetails.setSubject("User Details Update Successfully");
+	    emailDetails.setMsgBody(" New UserName: "+savedUser.getUserName() +"\n User-Name and password Updated");
 	    // Save the updated user entity back to the repository
-	    return userRepo.save(users);
+	    emailService.sendSimpleEmail(emailDetails);
+	    return savedUser;
 	}
 
 
@@ -107,7 +117,19 @@ public class AuthServiceImp implements AuthService{
 	    roles.add(userRole);
 	    newUser.setRoles(roles);
 	    
-	    return userRepo.save(newUser);
+	    Users savedUser = userRepo.save(newUser);
+	    
+	    //send email
+	    EmailDetails emailDetails = new EmailDetails();
+	    emailDetails.setRecipient(savedUser.getUserName());
+	    emailDetails.setSubject("Registration Successfull");
+	    emailDetails.setMsgBody("Dear User,\n Your User name: "
+	    	+savedUser.getUserName() + "\n Your Password : "
+	    	+savedUser.getPassword()+
+	    	",\n\n You have successfully registered !");
+	    
+	    emailService.sendSimpleEmail(emailDetails);
+	    return savedUser;
 	}
 
 	

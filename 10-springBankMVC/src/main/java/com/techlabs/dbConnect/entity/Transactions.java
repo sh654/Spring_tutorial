@@ -23,7 +23,7 @@ public class Transactions {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int transactionId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "accountId", nullable = false)
     private Accounts account;
 
@@ -38,11 +38,11 @@ public class Transactions {
 
     @Column(name="senderAccountNumber" , nullable = false)
     @NotNull(message = "Sender account number is required")
-    private Long senderAccountNumber;
+    private long senderAccountNumber;
 
     @Column(name = "receiverAccountNumber")
     @NotNull(message = "Receiver account number is required")
-    private Long receiverAccountNumber;
+    private long receiverAccountNumber;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

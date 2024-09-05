@@ -1,9 +1,13 @@
 package com.techlabs.dbConnect.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -53,6 +57,7 @@ public class AccountController {
 	}
 	
 	@PutMapping("/accounts/debit")
+	@PreAuthorize("hasRole('CUSTOMER')")
 	public ResponseEntity<String> debit(@Valid @RequestParam Long accountNumber,@Valid @RequestParam double amount) {
 		accountService.debit(accountNumber, accountNumber, amount, TransactionType.DEBIT);
 		return ResponseEntity.ok("Debited Successfully");
@@ -69,5 +74,11 @@ public class AccountController {
 		accountService.transfer(accountNumber, receiverNumber, amount);
 		return ResponseEntity.ok("Transfer Success");
 	}
+	
+	@GetMapping("/accounts/{customerId}")
+	public ResponseEntity<List<AccountsDto>>  getAccountsByCustomerId(@PathVariable int customerId) {
+        List<AccountsDto> accounts = accountService.getAccountsByCustomerId(customerId);
+        return ResponseEntity.ok(accounts);
+    }
 	
 }

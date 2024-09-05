@@ -12,20 +12,59 @@ import org.springframework.stereotype.Service;
 
 import com.techlabs.dbConnect.dtos.CustomersDto;
 import com.techlabs.dbConnect.dtos.PageResponse;
+import com.techlabs.dbConnect.entity.Accounts;
 import com.techlabs.dbConnect.entity.Customers;
+import com.techlabs.dbConnect.entity.EmailDetails;
+import com.techlabs.dbConnect.entity.Users;
+import com.techlabs.dbConnect.repository.AccountRepository;
 import com.techlabs.dbConnect.repository.CustomerRepository;
+import com.techlabs.dbConnect.repository.UserRepository;
 
 @Service
 public class CustomerServiceImp implements CustomerService{
 
 	@Autowired
+	private UserRepository userRepo;
+	@Autowired
 	private CustomerRepository customerRepo;
+	
+	@Autowired
+	private AccountRepository accountRepo;
+	
+	@Autowired
+	private EmailService emailService;
 	
 	@Override
 	public CustomersDto addCustomer(Customers customers) {
 		// TODO Auto-generated method stub
+		Users existingUser = userRepo.findById(customers.getUser().getUserId())
+	            .orElseThrow(() -> new RuntimeException("User not found with id provided"  ));
+
+	    // Attach the managed user entity to the customer
+	    customers.setUser(existingUser);
+		
 		customers = customerRepo.save(customers);
+		EmailDetails emailDetails = new EmailDetails();
+		emailDetails.setRecipient(customers.getUser().getUserName());
+		emailDetails.setSubject("Customer Registration Successfull");
+		emailDetails.setMsgBody("Welcome Customer : "+customers.getFirstName() +" " + customers.getLastName() +
+		"\n Your Customer Id : "+customers.getCustomerId() +
+		"\n Your Deatils are as below : \n Your Phone Number : " +customers.getPhone()
+		+"\n Your Address : "+customers.getAddress() +"\n Your Email: "+customers.getEmail());
+		
+		emailService.sendSimpleEmail(emailDetails);
 		return toCustomersDtoMapper(customers);
+	}
+	
+	private EmailDetails setEmailDetails(Customers customers) {
+	    EmailDetails emailDetails = new EmailDetails();
+	    emailDetails.setRecipient(customers.getUser().getUserName());
+	    emailDetails.setSubject("Customer Registration Successfull");
+	    emailDetails.setMsgBody("Welcome Customer : "+customers.getFirstName() +" " + customers.getLastName() +
+	    "\n Your Customer Id : "+customers.getCustomerId() +
+	    "\n Your Deatils are as below : \n Your Phone Number : " +customers.getPhone()
+	    +"\n Your Address : "+customers.getAddress() +"\n Your Email: "+customers.getEmail());
+	    return emailDetails;
 	}
 
 	@Override
@@ -52,6 +91,8 @@ public class CustomerServiceImp implements CustomerService{
 	  // Save the updated customer
 	    Customers savedCustomer = customerRepo.save(existingCustomer);
 	    
+	    EmailDetails emailDetails = setEmailDetails(savedCustomer);
+	    emailService.sendSimpleEmail(emailDetails); 
 	    // Convert to DTO and return
 	    return toCustomersDtoMapper(savedCustomer);
 	}
@@ -106,6 +147,12 @@ public class CustomerServiceImp implements CustomerService{
 	    customersDto.setCreatedAt(customers.getCreatedAt());
 	    customersDto.setUpdatedAt(customers.getUpdatedAt());
 	    return customersDto;
+	}
+
+	@Override
+	public CustomersDto assignAccounts(Customers customers, List<Accounts> accounts) {
+		
+		return null;
 	}
 
 

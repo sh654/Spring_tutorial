@@ -3,6 +3,8 @@ package com.techlabs.dbConnect.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,6 +36,12 @@ public class UserController {
 	public ResponseEntity<UsersDto> updateUsers(@RequestParam int userId ,@RequestBody UsersDto usersDto){
 		UsersDto userDto = userService.updateUser(userId, usersDto);
 		return ResponseEntity.ok(userDto);
+	}
+	
+	@GetMapping("/users/{userId}")
+	public ResponseEntity<UsersDto> getUserById(@PathVariable int userId){
+		UsersDto userDto = userService.getUser(userId);
+		return ResponseEntity.ok(userDto); 
 	}
 	
 }

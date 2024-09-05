@@ -6,6 +6,7 @@ import java.util.Set;
 
 import com.techlabs.dbConnect.entity.Role;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -19,10 +20,11 @@ import lombok.RequiredArgsConstructor;
 public class UsersDto {
 
     private int userId;
-    @NotBlank(message = "Username is required")
+    @NotBlank(message = "Email is required")
+    @Email(message = "Email should be valid")
     @Pattern(
-        regexp = "^[a-zA-Z][a-zA-Z0-9_@!#$%^&*]*$",
-        message = "Username must start with a letter and can contain letters, numbers, and special characters (_@!#$%^&*)"
+        regexp = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$",
+        message = "Email must be valid and follow the standard format (e.g., user@example.com)"
     )
     private String userName;
     

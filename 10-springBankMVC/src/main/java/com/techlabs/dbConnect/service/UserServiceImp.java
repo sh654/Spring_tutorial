@@ -87,5 +87,11 @@ public class UserServiceImp implements UserService{
 		users.setUpdatedAt(usersDto.getUpdatedAt());
 		return users;
 	}
+
+	@Override
+	public UsersDto getUser(int userId) {
+		Users user = userRepo.findById(userId).orElseThrow();
+		return toUsersDtoMapper(user);
+	}
 	
 }
