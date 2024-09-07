@@ -1,5 +1,6 @@
 package com.techlabs.dbConnect.service;
 
+import java.io.ByteArrayInputStream;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -47,6 +48,9 @@ public class TransactionServiceImpl implements TransactionService {
     @Autowired
     private EmailService emailService;
 
+    @Autowired
+    private PdfExportService pdfExportService;
+    
     @Override
     public PageResponse<TransactionDto> getSenderTransaction(int pageNo, int pageSize, long senderAccountNumber) {
 
@@ -156,6 +160,17 @@ public class TransactionServiceImpl implements TransactionService {
 	    response.setLastPage(transactionsPage.isLast());
 
 	    return response;
+	}
+
+
+	@Override
+	public ByteArrayInputStream exportTransactionToPdf(long accountNumber, TransactionType type) {
+		List<Transactions> transactions =transactionsRepository.findBySenderAccountNumberAndTransactionType(accountNumber, type);
+		List<TransactionDto> transactionDtos = transactions.stream()
+				.map(this::toDtoMapper)
+				.collect(Collectors.toList());
+		
+		return pdfExportService.exportTransactionToPdf(transactionDtos);
 	}
 
 	

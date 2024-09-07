@@ -1,4 +1,4 @@
-package com.techlabs.dbConnect.entity;
+	package com.techlabs.dbConnect.entity;
 
 import java.time.LocalDateTime;
 
@@ -14,10 +14,12 @@ import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Entity
 @Table(name="admin")
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Data
 public class Admin {
 
@@ -28,7 +30,10 @@ public class Admin {
 	
 	@OneToOne
 	@JoinColumn(name="userId")
-	private Users users;
+	private Users user;
+	
+	@Column(name="adminContact")
+	private String phone;
 	
 	@Column(name="created_at", updatable = false)
 	private LocalDateTime createdAt;

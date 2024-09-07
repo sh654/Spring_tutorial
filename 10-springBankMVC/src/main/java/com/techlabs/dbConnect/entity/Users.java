@@ -68,8 +68,8 @@ public class Users {
 	@OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
 	private Customers customer;
 
-//	@OneToOne(cascade = CascadeType.ALL)
-//	private Admin admin;
+	@OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
+	private Admin admin;
 	
 	@PrePersist
 	protected void onCreate() {
